@@ -1,0 +1,130 @@
+Big Picture = how does the html look? how does it function?
+Follow the order of functions to build js + html
+
+- Write out step by step what the user will do
+- Write out step by step what happens on each page, with each
+    button or element
+- Write those functions, while writing simple versions of the html
+    pages in the js at the same time
+
+Note from 10.28 Morning Workshop
+    - No rendering HTML to DOM in event handlers
+    - Event Handler should listen to click, then have render function,
+        which will call the html
+    - Wireframing: Balsamic, Gimp, Google Drawings
+    - 
+
+
+To do 10.29:
+- double-check item grouping for bookmark list
+
+3
+- html for buttons
+- Make buttons functional
+
+1
+/ html for expanded bookmark view
+- Generate expanded bookmark view
+- Render expanded bookmark view
+
+    /  need buttons for url link, delete; need description
+
+
+2
+/ html for add bookmark FORM 
+- Generate add bookmark form 
+- render add bookmark form 
+
+
+Sorting for JS
+- index: main executions; api.getItems; importing everything else
+- api: getItems(); createItem() fetch; updateItem() fetch; deleteItem() fetch;
+- bookmark: generating and rendering - bookmark list, expanded view, add bookmark form;
+    handlers for editing and deleting
+ - store: managing store with adding, deleting, edting;
+
+
+ just used this html code for star     &#9733;
+
+ an event handler that triggers when you click the container for your bookmark item that toggles the expand attribute and then calls render
+You could loop through each bookmark and add an expanded boolean
+Just execute when it’s true
+
+
+<!--<ul class="js-bookmarks">
+            <li class="js-bookmarks" id="${bookmark.id}">
+                <div class="bookmark-title">
+                    <p>${bookmark.title}</p>
+                </div>
+                <div class="bookmark-rating">
+                    <p>${bookmark.rating}</p>
+                </div>
+              </li>
+        </ul>
+        
+
+
+
+
+
+
+        <div class="add-item">
+            <h3>Add New Bookmark</h3>
+            <form>
+
+            </form>
+        </div>-->
+
+
+
+
+
+
+        /*
+  let coll = document.getElementsByClassName("collapsible");
+let i;
+
+for (i = 0; i < coll.length; i++) {
+
+    coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+  return `<button type="button" class="collapsible">${bookmark.title} | ${bookmark.rating}</button>
+  <div class="content">
+    <p>${bookmark.description}</p>
+  </div>`
+
+  return `<div class="selector">
+  <h3>${bookmark.title} | ${bookmark.rating}</h3>
+  <div>
+    <p>
+    ${bookmark.description}
+    </p>
+  </div>`
+  */
+
+
+
+  /* OLD FUNCTION FOR ADDING TO STORE; ALSO HAS CATCH FOR ERRORS
+function putBookmarkInStore(newBookmark){
+  try{
+    bookmark.validateName(newBookmark);
+    store.bookmarks.push(newBookmark);
+    console.log(newBookmark);
+    render();
+}
+    catch(Error){
+        console.log(`Cannot add item: ${Error.message}`)
+    }
+}
+*/
+
+ still need this in CREATE and DELETE on LIST???     //.then(res => res.json())
